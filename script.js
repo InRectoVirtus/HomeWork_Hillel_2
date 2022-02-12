@@ -24,7 +24,7 @@ for(i = 2; i <= isPrime; i++){
         if(i % j == 0) continue stepThird;
     }
     if(i == isPrime) {
-        alert(`${isPrime} простое число`)
+        alert(`${isPrime} простое число`);
     }
 }
 
@@ -43,4 +43,4 @@ for(i = 0; i <= 250; i++) {
     summ += i;
 }
 
-alert(summ)
+alert(summ);

@@ -17,30 +17,26 @@ do {
 // Third
 
 let isPrime = +prompt('Проверка на простое число');
+let check = 0;
 
-stepThird:
-for(i = 2; i <= isPrime; i++){
-    for(j = 2; j < i; j++){
-        if(i % j == 0) continue stepThird;
-    }
-    if(i == isPrime) {
-        alert(`${isPrime} простое число`);
-    }
-}
+for (let i = 1; i <= isPrime; i++) {
+  if(isPrime % i == 0) {
+    check += 1;
+  };
+};
+
+(check <= 2 && isPrime != 0 && isPrime != 1) ? console.log(`${isPrime} простое`) : console.log('Простого числа нету')
 
 
 // Fourth
 
-let summ = 0;
+let primeSumm = 0;
+for (i = 0; i <= 250; i++) {
+  let checkPrime = 0;
 
-stepFourth:
-for(i = 0; i <= 250; i++) {
-    if (i == 0 || i == 1) continue stepFourth;
-
-    for(j = 2; j < i; j++) {
-        if (i % j == 0) continue stepFourth;
-    }
-    summ += i;
+  for (j = 0; j <= i; j++) {
+    (i % j == 0) ? checkPrime += 1 : false;
+  }
+    (checkPrime <= 2  && i != 0 && i !=1) ? primeSumm += i : false;
 }
-
-alert(summ);
+console.log(primeSumm);
